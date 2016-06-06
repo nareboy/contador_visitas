@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Contador de Visitas </title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css" media="screen">
+	<script src=./socket.io/socket.io.js></script>
+	<script>
+		var socket = io('http://localhost:7777');
+    	socket.on('visits', function(visitas){
+      		document.getElementById('visitas').innerHTML = visitas;
+    	});
+    </script>
+
+</head>
+
+<body>
+	<header>
+		<img src="../images/logo-openport.png">
+		<h3><p>N&uacute;mero de visitas: <span id="visitas"></span></p></h3>
+	</header>
+
+	<section>
+		Bem vindo ao sistema de contagem de visitas. 
+	</section>
+
+</body>
+
+	
+	
+</body>
+
+</html>
